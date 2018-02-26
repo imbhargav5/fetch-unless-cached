@@ -13,7 +13,7 @@ Store fetch responses in localStorage with expire timers! And fetch only if the 
 
    - A wrapper on top isomorphic-fetch
    - When data is fetched, it's stored in localStorage with an expire timer
-   - When data is reqeusted, it checks in the storage and only fetches if needed, otherwise it resolves the cached data
+   - When data is reqeusted, it checks in the storage and only fetches if needed, otherwise it resolves the cached data. However, the api is call is made when the browser is idle and the timer is udpated. 
    
 
 ## Installation
