@@ -2,7 +2,7 @@
   "name": "fetch-unless-cached",
   "version": "1.0.0",
   "description": "",
-  "main": "index.js",
+  "main": "lib/index.js",
   "scripts": {
     "prebuild": "rimraf lib",
     "pretty": "prettier --write '{__tests__,src}/*.js'",
