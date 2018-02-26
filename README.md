@@ -4,10 +4,10 @@ Store fetch responses in localStorage with timers! And fetch only if the timer h
 
 <hr/>
 
-[![](https://nodei.co/npm/fetch-unless-cached.png?compact=true)](https://nodei.co/npm/react-lazy-progressive-image/)
+[![](https://nodei.co/npm/fetch-unless-cached.png?compact=true)](https://nodei.co/npm/fetch-unless-cached/)
 
-[![npm](https://img.shields.io/npm/dm/fetch-unless-cached.svg?style=for-the-badge)](https://www.npmjs.com/package/react-lazy-progressive-image)
-[![npm](https://img.shields.io/npm/l/fetch-unless-cached.svg?style=for-the-badge)](https://www.npmjs.com/package/react-lazy-progressive-image)
+[![npm](https://img.shields.io/npm/dm/fetch-unless-cached.svg?style=for-the-badge)](https://www.npmjs.com/package/fetch-unless-cached)
+[![npm](https://img.shields.io/npm/l/fetch-unless-cached.svg?style=for-the-badge)](https://www.npmjs.com/package/fetch-unless-cached)
 
 ## Installation
 
@@ -24,7 +24,6 @@ npm i --save fetch-unless-cached
    ```
 
 2. Or create a custom cached fetch function with your own duration
-
 
 ```javascript
 import {createfetchUnlessCached} from "fetch-unless-cached"
