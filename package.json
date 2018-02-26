@@ -19,8 +19,7 @@
     "type": "git",
     "url": "git+https://github.com/imbhargav5/fetch-unless-cached.git"
   },
-  "author":
-    "Bhargav Ponnapalli <bhargavponnapalli.5@gmail.com> (https://github.com/imbhargav5)",
+  "author": "Bhargav Ponnapalli <bhargavponnapalli.5@gmail.com> (https://github.com/imbhargav5)",
   "license": "MIT",
   "bugs": {
     "url": "https://github.com/imbhargav5/fetch-unless-cached/issues"
@@ -37,7 +36,12 @@
     "babel-core": "6.26.0",
     "babel-jest": "22.4.1",
     "babel-preset-env": "1.6.1",
+    "eslint": "4.18.1",
+    "eslint-config-prettier": "2.9.0",
+    "eslint-plugin-babel": "4.1.2",
+    "eslint-plugin-prettier": "2.6.0",
     "jest": "22.4.2",
+    "prettier": "1.10.2",
     "rimraf": "2.6.2"
   }
 }
