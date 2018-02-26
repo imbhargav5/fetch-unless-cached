@@ -17,6 +17,14 @@ npm i --save fetch-unless-cached
 
 ## Usage
 
+1. Use the inbuilt cached fetch which caches response for 600 minutes.
+
+```javascript
+import cachedFetch from "fetch-unless-cached";
+```
+
+2. Or create a custom cached fetch function with your own duration
+
 ```javascript
 import {createfetchUnlessCached} from "fetch-unless-cached"
 
