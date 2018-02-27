@@ -1,6 +1,6 @@
 # fetch-unless-cached
 
-Store fetch responses in localStorage with expire timers! And fetch only if the timer has expired.
+Store fetch JSON responses in localStorage with expire timers! And fetch only if the timer has expired.
 
 <hr/>
 
@@ -11,10 +11,9 @@ Store fetch responses in localStorage with expire timers! And fetch only if the 
 
 ## What is it really?
 
-   - A wrapper on top isomorphic-fetch
-   - When data is fetched, it's stored in localStorage with an expire timer
-   - When data is reqeusted, it checks in the storage and only fetches if needed, otherwise it resolves the cached data. However, the api is call is made when the browser is idle and the timer is udpated. 
-   
+* A wrapper on top isomorphic-fetch for JSON responses
+* When data is fetched, it's stored in localStorage with an expire timer
+* When data is reqeusted, it checks in the storage and only fetches if needed, otherwise it resolves the cached data. However, the api is call is made when the browser is idle and the timer is udpated.
 
 ## Installation
 
@@ -43,9 +42,11 @@ const cachedFetch = createfetchUnlessCached(300)
 function fetchMyData(){
   /*
    * cachedFetch is just isomorphic-fetch but coupled with cache
+   * Do not perform .then(res => res.json()) as this happens internally
+   *
    */
   ...
-  return cachedFetch('myapi.com').then(res => res.json())
+  return cachedFetch('myapi.com').then(response => console.log(response))
 }
 ```
 
@@ -53,3 +54,7 @@ function fetchMyData(){
 
 * [x] isomorphic-fetch - Fetch api for node and browser
 * [x] lscache - localStorage caching with timers
+
+## Caveats
+
+* [x] Works only with JSON responses
