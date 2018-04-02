@@ -9,7 +9,8 @@ const isClient = () => typeof window !== "undefined";
 const LSCACHE_TIMEOUT_IN_MINUTES = 10 * 60;
 
 export function createfetchUnlessCached(
-  cacheDuration = LSCACHE_TIMEOUT_IN_MINUTES
+  cacheDuration = LSCACHE_TIMEOUT_IN_MINUTES,
+  fetchIfIdle = false
 ) {
   return function fetchUnlessCached(...fetchOpts) {
     /**
@@ -49,12 +50,14 @@ export function createfetchUnlessCached(
          * but behind the scenes fetch new data. We can use this data the next time it is requested
          * This is async . So the response return is immediate
          */
-        requestIdleCallback.request(() => {
-          /**
-           * Client is idle. Now fetch the response and cache
-           */
-          fetchDataFromServer();
-        });
+        if (fetchIfIdle) {
+          requestIdleCallback.request(() => {
+            /**
+             * Client is idle. Now fetch the response and cache
+             */
+            fetchDataFromServer();
+          });
+        }
 
         /**
          * Resolve the cachedResponse first and then fetch in the idle callback at a later time

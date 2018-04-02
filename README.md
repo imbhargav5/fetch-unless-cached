@@ -13,7 +13,8 @@ Store fetch JSON responses in localStorage with expire timers! And fetch only if
 
 * A wrapper on top isomorphic-fetch for JSON responses
 * When data is fetched, it's stored in localStorage with an expire timer
-* When data is reqeusted, it checks in the storage and only fetches if needed, otherwise it resolves the cached data. However, the api is call is made when the browser is idle and the timer is udpated.
+* When data is reqeusted, it checks in the storage and only fetches if needed, otherwise it resolves the cached data.
+* Optionally, the api call can be made when the browser is idle and the timer is udpated.
 
 ## Installation
 
@@ -48,6 +49,12 @@ function fetchMyData(){
   ...
   return cachedFetch('myapi.com').then(response => console.log(response))
 }
+```
+
+Note: If you would like to fetch during an idle state you can set the second argument to true.
+
+```javascript
+const cachedFetch = createfetchUnlessCached(300, true);
 ```
 
 ### Credits
