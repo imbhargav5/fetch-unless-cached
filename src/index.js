@@ -44,7 +44,6 @@ export function createfetchUnlessCached(
        */
 
       if (cachedResponse) {
-        console.table(fetchOpts);
         /**
          * return the promise containing the saved data
          * but behind the scenes fetch new data. We can use this data the next time it is requested
